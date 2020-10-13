@@ -1,0 +1,1 @@
+Here are bioinfo-sequences in CoralBioinfo for BLAST and download.
