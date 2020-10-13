@@ -1,0 +1,31 @@
+version: '3'
+services:
+  coralbioinfo:
+    stdin_open: true
+    tty: true
+    restart: always
+    build: .
+    ports:
+      - 81:80
+    volumes:
+      - ./web:/var/www/coralbioinfo
+      - ./data:/var/www/html
+      - ./config:/etc/nginx/sites-enabled
+  coralseqserver:
+    stdin_open: true
+    tty: true
+    restart: always
+    build: ./app/seqserver
+    ports:
+    - 4567:4567
+    volumes:
+    - ./data/seq:/db
+  coralbrowser:
+    stdin_open: true
+    tty: true
+    restart: always
+    build: ./app/jbrowse
+    ports:
+    - 3000:3000
+    volumes:
+    - ./data/jbrowse:/node_modules/@gmod/jbrowse
