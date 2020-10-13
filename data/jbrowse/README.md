@@ -1,0 +1,1 @@
+CoralBioinfo uses [JBrowse](https://jbrowse.org/) as genome browser. Please put your formatted data into `jbrowse/`.
