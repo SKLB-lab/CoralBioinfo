@@ -6,7 +6,7 @@ services:
     restart: always
     build: .
     ports:
-      - 81:80
+      - 80:80
     volumes:
       - ./web:/var/www/coralbioinfo
       - ./data:/var/www/html
