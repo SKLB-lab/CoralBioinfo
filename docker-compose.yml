@@ -1,17 +1,17 @@
 version: '3'
 services:
-  coralbioinfo:
+  web:
     stdin_open: true
     tty: true
     restart: always
     build: .
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./web:/var/www/coralbioinfo
       - ./data:/var/www/html
       - ./config:/etc/nginx/sites-enabled
-  coralseqserver:
+  seqserver:
     stdin_open: true
     tty: true
     restart: always
@@ -20,7 +20,7 @@ services:
     - 4567:4567
     volumes:
     - ./data/seq:/db
-  coralbrowser:
+  browser:
     stdin_open: true
     tty: true
     restart: always
