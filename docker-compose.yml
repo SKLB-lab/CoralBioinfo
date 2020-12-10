@@ -4,7 +4,7 @@ services:
     stdin_open: true
     tty: true
     restart: always
-    build: .
+    image: 213170096/coralbioinfo_web
     ports:
       - 80:80
     volumes:
@@ -15,7 +15,7 @@ services:
     stdin_open: true
     tty: true
     restart: always
-    build: ./app/seqserver
+    image: 213170096/coralbioinfo_seqserver
     ports:
     - 4567:4567
     volumes:
@@ -24,8 +24,6 @@ services:
     stdin_open: true
     tty: true
     restart: always
-    build: ./app/jbrowse
+    image: 213170096/coralbioinfo_browser
     ports:
     - 3000:3000
-    volumes:
-    - ./data/jbrowse:/node_modules/@gmod/jbrowse

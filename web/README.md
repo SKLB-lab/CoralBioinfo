@@ -1,1 +1,0 @@
-Here are the source codes of CoralBioinfo home page.
