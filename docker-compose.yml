@@ -6,7 +6,7 @@ services:
     restart: always
     image: 213170096/coralbioinfo_web
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./web:/var/www/coralbioinfo
       - ./data:/var/www/html
@@ -20,6 +20,15 @@ services:
     - 4567:4567
     volumes:
     - ./data/seq:/db
+  seqserver_miRNA:
+    stdin_open: true
+    tty: true
+    restart: always
+    image: 213170096/coralbioinfo_seqserver
+    ports:
+    - 45671:4567
+    volumes:
+    - ./data/seq/miRNA:/db
   browser:
     stdin_open: true
     tty: true
