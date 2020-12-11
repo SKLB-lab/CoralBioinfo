@@ -7,6 +7,10 @@ server {
 	        proxy_pass http://172.17.0.1:4567/;
         }
 
+        location /blast_miR/ {
+            proxy_pass http://172.17.0.1:45671/;
+        }
+
         location /browser/ {
 	        proxy_pass http://172.17.0.1:3000/;
         }
