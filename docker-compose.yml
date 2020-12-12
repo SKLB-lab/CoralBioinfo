@@ -6,7 +6,7 @@ services:
     restart: always
     image: 213170096/coralbioinfo_web
     ports:
-      - 81:80
+      - 80:80
     volumes:
       - ./web:/var/www/coralbioinfo
       - ./data:/var/www/html
