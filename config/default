@@ -8,7 +8,15 @@ server {
         }
 
         location /blast_miR/ {
-            proxy_pass http://172.17.0.1:45671/;
+                proxy_pass http://172.17.0.1:45671/;
+        }
+
+        location /blast_unigene/ {
+                proxy_pass http://172.17.0.1:45672/;
+        }
+
+        location /blast_genome/ {
+                proxy_pass http://172.17.0.1:45673/;
         }
 
         location /browser/ {
