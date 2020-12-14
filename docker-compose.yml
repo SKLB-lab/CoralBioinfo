@@ -20,6 +20,7 @@ services:
     - 4567:4567
     volumes:
     - ./data/seq:/db
+    - ./app/seqserver/layout.erb:/sequenceserver/views/layout.erb
   seqserver_miRNA:
     stdin_open: true
     tty: true
@@ -29,6 +30,24 @@ services:
     - 45671:4567
     volumes:
     - ./data/seq/miRNA:/db
+  seqserver_Unigene:
+    stdin_open: true
+    tty: true
+    restart: always
+    image: 213170096/coralbioinfo_seqserver
+    ports:
+    - 45672:4567
+    volumes:
+    - ./data/seq/Iso-seq:/db
+  seqserver_Genome:
+    stdin_open: true
+    tty: true
+    restart: always
+    image: 213170096/coralbioinfo_seqserver
+    ports:
+    - 45673:4567
+    volumes:
+    - ./data/seq/genome:/db
   browser:
     stdin_open: true
     tty: true
