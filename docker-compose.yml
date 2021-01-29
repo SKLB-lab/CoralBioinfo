@@ -38,7 +38,7 @@ services:
     ports:
     - 45672:4567
     volumes:
-    - ./data/seq/Iso-seq:/db
+    - ./data/seq/unigene:/db
   seqserver_Genome:
     stdin_open: true
     tty: true
@@ -48,10 +48,3 @@ services:
     - 45673:4567
     volumes:
     - ./data/seq/genome:/db
-  browser:
-    stdin_open: true
-    tty: true
-    restart: always
-    image: 213170096/coralbioinfo_browser
-    ports:
-    - 3000:3000
