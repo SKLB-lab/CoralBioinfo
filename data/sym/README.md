@@ -1,0 +1,1 @@
+Here are sequences in CoralSym for BLAST and download.

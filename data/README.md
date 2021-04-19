@@ -1,3 +1,3 @@
-- [jbrowse](jbrowse/README.md)
 - [release](release/README.md)
 - [seq](seq/README.md)
+- [sym](sym/README.md)

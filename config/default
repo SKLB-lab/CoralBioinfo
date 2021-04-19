@@ -19,8 +19,8 @@ server {
                 proxy_pass http://172.17.0.1:45673/;
         }
 
-        location /browser/ {
-	        proxy_pass http://172.17.0.1:3000/;
+        location /blast_sym/ {
+                proxy_pass http://172.17.0.1:45674/;
         }
 
         location /seq/ {
@@ -47,8 +47,19 @@ server {
 		rewrite /miR/api/[a-zA-Z0-9/\+\.\*\-:_] /miR/api/;
         }
 
+        location /sym/ {
+                rewrite /sym/specie/[a-zA-Z0-9/\+\.\*\-:_] /sym/specie/;
+                rewrite /sym/mature/[a-zA-Z0-9/\+\.\*\-:_] /sym/mature/;
+                rewrite /sym/hairpin/[a-zA-Z0-9/\+\.\*\-:_] /sym/hairpin/;
+                rewrite /sym/gene/[a-zA-Z0-9/\+\.\*\-:_] /sym/gene/;
+                rewrite /sym/target/[a-zA-Z0-9/\+\.\*\-:_] /sym/target/;
+                rewrite /sym/star/[a-zA-Z0-9/\+\.\*\-:_] /sym/star/;
+		rewrite /sym/api/[a-zA-Z0-9/\+\.\*\-:_] /sym/api/;
+        }
+
         location / {
                 rewrite /api/[a-zA-Z0-9/\+\.\*\-:_] /api/;
+                rewrite /gene/[a-zA-Z0-9/\+\.\*\-:_] /gene/;
         }
 
         location ~ \.php$ {

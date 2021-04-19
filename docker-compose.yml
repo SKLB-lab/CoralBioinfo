@@ -48,3 +48,12 @@ services:
     - 45673:4567
     volumes:
     - ./data/seq/genome:/db
+  seqserver_sym:
+    stdin_open: true
+    tty: true
+    restart: always
+    image: 213170096/coralbioinfo_seqserver
+    ports:
+    - 45674:4567
+    volumes:
+    - ./data/sym:/db
