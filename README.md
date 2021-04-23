@@ -1,2 +1,6 @@
 # CoralBioinfo
 Although reef-building corals play an important role in the global marine ecosystem, there emerges a huge lack of omics data as well as databases from these species, exerting negative effects on exploring their biology. Here we introduce the construction of SKLB CoralBioinfo database series (http://bmeonline.cn/coralbioinfo), which integrate our new multi-omics sequencing data from various main reef-building coral species with other existing coral bio-data. Main-database CoralBioinfo storing basic bioinformatics data lay the foundation for down-stream analysis and development, while sub-databases CoralmiR and CoralSym constitute reef-building coral miRNA dataset together to pave the way for cross-kingdom regulation research. Embedded with multiple web services, SKLB CoralBioinfo is expected to fulfil the “data gap” and help the scientific community deepen understanding of coral biology.
+## Browser Compatibility
+| Chrome | Firefox | Microsoft Edge | Internet Explorer | Safari |
+| ------ | ------- | -------------- | ----------------- | ------ |
+| 67.0+  | 45.2+   | 44.18362.1.0   | 11.1.18362.0      | 13.04  |
